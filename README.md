@@ -1,13 +1,13 @@
 # Subdomain Monitor (Multi Domain)
 
-Script untuk monitoring subdomain baru dari crt.sh dan mengirim alert ke Telegram **dan/atau** Discord.
+Script untuk monitoring subdomain baru dari crt.sh dan mengirim alert ke Telegram/Discord.
 **Mendukung monitoring multiple domains secara bersamaan!**
 
 ## Fitur
 
 - 🔍 Monitoring subdomain baru dari crt.sh untuk multiple domains
 - 💾 Penyimpanan data subdomain di SQLite database (terpisah per domain)
-- 📱 Alert otomatis ke Telegram **dan/atau** Discord (bisa pilih salah satu atau keduanya)
+- 📱 Alert otomatis ke Telegram/Discord (bisa pilih salah satu atau keduanya)
 - ⏰ Monitoring berkelanjutan dengan interval yang dapat dikonfigurasi
 - 📝 Logging lengkap untuk setiap domain
 - 🚀 Support monitoring puluhan domain sekaligus
@@ -138,7 +138,7 @@ sqlite3 subdomains.db "SELECT domain, COUNT(*) as count FROM subdomains GROUP BY
 
 ## Cara Kerja Multi Domain & Multi Alert
 
-1. **Script akan monitor setiap domain secara paralel (threading, BERSAMAAN, BUKAN berurutan!)**
+1. **Script akan monitor setiap domain secara paralel (threading)**
 2. **Setiap domain memiliki data terpisah di database**
 3. **Alert Telegram dan/atau Discord akan dikirim terpisah untuk setiap domain**
 4. **Interval monitoring berlaku untuk semua domain**
